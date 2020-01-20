@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -29,10 +29,12 @@ gem 'rmagick'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+# Heroku 環境ではエラーが出るため使用しない
+   # Use sqlite3 as the database for Active Record
+   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  #ここ1行追加
-  gem 'sqlite3', '1.4'
+
 end
 gem 'devise'
 
@@ -63,6 +65,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bundler'
 
-group :production do
-  gem 'pg', '0.18.4'
-end
+
