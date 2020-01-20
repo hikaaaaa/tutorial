@@ -4,16 +4,17 @@
     <title>Tutorial</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag "layouts", :media => "all" %>
+    <%= stylesheet_link_tag "home", :media => "all" %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
     <%= render "layouts/header" %>
-    <div class="container-fruid h-100 p-2 d-flex flex-column">
+    
     <%= yield %>
-    </div>
+    
     <%= render "layouts/footer" %>
   </body>
 </html>
