@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Tutorial</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <div class="container-fruid h-100 p-2 d-flex flex-column">
+    <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, '投稿タイトル' %>
+    <%= form.text_field :title , class: "form-control" %>
+    <small id="poster-tip" class="form-text text-muted">
+            投稿タイトルを入力してください。
+    </small>
+  </div>
+
+  <div class="field">
+    <%= form.label :content, '投稿内容' %>
+    <%= form.text_area :content, class: 'form-control', rows:10 %>
+    <small id="title-tip" class="form-text text-muted">
+            投稿内容を入力してください。
+    </small>
+  </div>
+
+  <div class="field">
+  <%= form.label :画像 %><br />
+  <%= form.file_field :img, class: "image" %>
+    <small id="title-tip" class="form-text text-muted">
+            ポエムにあった画像を選んでください。
+    </small>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '投稿', class: "btn-info btn-block" %>
+    <small id="submit-tip" class="form-text text-muted text-center">
+        投稿する前に投稿内容を見直してください!
+    </small>
+  </div>
+
+<% end %>
+</div>

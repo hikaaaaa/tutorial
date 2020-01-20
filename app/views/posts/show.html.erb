@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container pt-5">
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<strong>image:</strong>
+<p class="text-center pt-3">
+  <%= image_tag @post.img.url, :size =>'auto' %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post), class: "btn btn-link" %> |
+<%= link_to 'Back', posts_path, class: "btn btn-link" %>
+</div>
