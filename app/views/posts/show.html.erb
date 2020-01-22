@@ -15,6 +15,6 @@
   <%= image_tag @post.img.url, :size =>'auto' %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post), class: "btn btn-link" %> |
-<%= link_to 'Back', posts_path, class: "btn btn-link" %>
+<%= link_to '編集', edit_post_path(@post), class: "btn btn-secondary" %> |
+<%= link_to '戻る', posts_path, class: "btn btn-link" %>
 </div>
