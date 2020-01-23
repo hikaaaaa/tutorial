@@ -28,7 +28,9 @@
       <tr>
         <td><%= truncate(post.title, length: 10) %></td>
         <td><%= truncate(post.content, length: 30) %></td>
-        <td><%= link_to '画像', post, class: "btn btn-link" %></td>
+        <td><%= link_to post do %>
+          <i class="fas fa-camera-retro fa-3x pb-1 ml-3"></i>
+                    <% end %></td>
         <td><%= link_to '編集', edit_post_path(post), class: "btn btn-secondary" %></td>
         <td><%= link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>

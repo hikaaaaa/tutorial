@@ -39,11 +39,11 @@
 
   <div class="actions">
     <%= form.submit '投稿', class: "btn-info btn-block" %>
-    <small id="submit-tip" class="form-text text-muted text-center">
+    <small id="submit-tip" class="form-text text-muted text-center py-3">
         投稿する前に投稿内容を見直してください!
     </small>
   </div>
-
+  <%= link_to '戻る', posts_path, class: "btn btn-primary btn-block" %>
 <% end %>
 </div>
 </div>
